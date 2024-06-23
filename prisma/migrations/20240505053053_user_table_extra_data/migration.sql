@@ -1,0 +1,4 @@
+-- AlterTable
+ALTER TABLE `User` ADD COLUMN `bio` VARCHAR(191) NULL,
+    ADD COLUMN `earnings` DOUBLE NULL DEFAULT 0,
+    ADD COLUMN `numberOfDeals` DOUBLE NULL DEFAULT 0;

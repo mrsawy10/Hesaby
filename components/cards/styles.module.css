@@ -1,0 +1,419 @@
+.form-container {
+  /* background: linear-gradient(#212121, #212121) padding-box,
+    linear-gradient(0deg, transparent 35%, #e81cff, #40c9ff) border-box; */
+  border: 5px solid transparent;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  animation: gradient 10s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background: linear-gradient(#212121, #212121) padding-box,
+      linear-gradient(0deg, transparent 35%, #e81cff, #40c9ff) border-box;
+  }
+  1% {
+    background: linear-gradient(#212121, #212121) padding-box,
+      linear-gradient(3.6deg, transparent 35%, #e81cff, #40c9ff) border-box;
+  }
+  2% {
+    background: linear-gradient(#212121, #212121) padding-box,
+      linear-gradient(7.2deg, transparent 35%, #e81cff, #40c9ff) border-box;
+  }
+  3% {
+    background: linear-gradient(#212121, #212121) padding-box,
+      linear-gradient(10.8deg, transparent 35%, #e81cff, #40c9ff) border-box;
+  }
+  4% {
+    background: linear-gradient(#212121, #212121) padding-box,
+      linear-gradient(14.4deg, transparent 35%, #e81cff, #40c9ff) border-box;
+  }
+  5% {
+    background: linear-gradient(#212121, #212121) padding-box,
+      linear-gradient(18deg, transparent 35%, #e81cff, #40c9ff) border-box;
+  }
+  6% {
+    background: linear-gradient(#212121, #212121) padding-box,
+      linear-gradient(21.6deg, transparent 35%, #e81cff, #40c9ff) border-box;
+  }
+  7% {
+    background: linear-gradient(#212121, #212121) padding-box,
+      linear-gradient(25.2deg, transparent 35%, #e81cff, #40c9ff) border-box;
+  }
+  8% {
+    background: linear-gradient(#212121, #212121) padding-box,
+      linear-gradient(28.8deg, transparent 35%, #e81cff, #40c9ff) border-box;
+  }
+  9% {
+    background: linear-gradient(#212121, #212121) padding-box,
+      linear-gradient(32.4deg, transparent 35%, #e81cff, #40c9ff) border-box;
+  }
+  10% {
+    background: linear-gradient(#212121, #212121) padding-box,
+      linear-gradient(36deg, transparent 35%, #e81cff, #40c9ff) border-box;
+  }
+  11% {
+    background: linear-gradient(#212121, #212121) padding-box,
+      linear-gradient(39.6deg, transparent 35%, #e81cff, #40c9ff) border-box;
+  }
+  12% {
+    background: linear-gradient(#212121, #212121) padding-box,
+      linear-gradient(43.2deg, transparent 35%, #e81cff, #40c9ff) border-box;
+  }
+  13% {
+    background: linear-gradient(#212121, #212121) padding-box,
+      linear-gradient(46.8deg, transparent 35%, #e81cff, #40c9ff) border-box;
+  }
+  14% {
+    background: linear-gradient(#212121, #212121) padding-box,
+      linear-gradient(50.4deg, transparent 35%, #e81cff, #40c9ff) border-box;
+  }
+  15% {
+    background: linear-gradient(#212121, #212121) padding-box,
+      linear-gradient(54deg, transparent 35%, #e81cff, #40c9ff) border-box;
+  }
+  16% {
+    background: linear-gradient(#212121, #212121) padding-box,
+      linear-gradient(57.6deg, transparent 35%, #e81cff, #40c9ff) border-box;
+  }
+  17% {
+    background: linear-gradient(#212121, #212121) padding-box,
+      linear-gradient(61.2deg, transparent 35%, #e81cff, #40c9ff) border-box;
+  }
+  18% {
+    background: linear-gradient(#212121, #212121) padding-box,
+      linear-gradient(64.8deg, transparent 35%, #e81cff, #40c9ff) border-box;
+  }
+  19% {
+    background: linear-gradient(#212121, #212121) padding-box,
+      linear-gradient(68.4deg, transparent 35%, #e81cff, #40c9ff) border-box;
+  }
+  20% {
+    background: linear-gradient(#212121, #212121) padding-box,
+      linear-gradient(72deg, transparent 35%, #e81cff, #40c9ff) border-box;
+  }
+  21% {
+    background: linear-gradient(#212121, #212121) padding-box,
+      linear-gradient(75.6deg, transparent 35%, #e81cff, #40c9ff) border-box;
+  }
+  22% {
+    background: linear-gradient(#212121, #212121) padding-box,
+      linear-gradient(79.2deg, transparent 35%, #e81cff, #40c9ff) border-box;
+  }
+  23% {
+    background: linear-gradient(#212121, #212121) padding-box,
+      linear-gradient(82.8deg, transparent 35%, #e81cff, #40c9ff) border-box;
+  }
+  24% {
+    background: linear-gradient(#212121, #212121) padding-box,
+      linear-gradient(86.4deg, transparent 35%, #e81cff, #40c9ff) border-box;
+  }
+  25% {
+    background: linear-gradient(#212121, #212121) padding-box,
+      linear-gradient(90deg, transparent 35%, #e81cff, #40c9ff) border-box;
+  }
+  26% {
+    background: linear-gradient(#212121, #212121) padding-box,
+      linear-gradient(93.6deg, transparent 35%, #e81cff, #40c9ff) border-box;
+  }
+  27% {
+    background: linear-gradient(#212121, #212121) padding-box,
+      linear-gradient(97.2deg, transparent 35%, #e81cff, #40c9ff) border-box;
+  }
+  28% {
+    background: linear-gradient(#212121, #212121) padding-box,
+      linear-gradient(100.8deg, transparent 35%, #e81cff, #40c9ff) border-box;
+  }
+  29% {
+    background: linear-gradient(#212121, #212121) padding-box,
+      linear-gradient(104.4deg, transparent 35%, #e81cff, #40c9ff) border-box;
+  }
+  30% {
+    background: linear-gradient(#212121, #212121) padding-box,
+      linear-gradient(108deg, transparent 35%, #e81cff, #40c9ff) border-box;
+  }
+  31% {
+    background: linear-gradient(#212121, #212121) padding-box,
+      linear-gradient(111.6deg, transparent 35%, #e81cff, #40c9ff) border-box;
+  }
+  32% {
+    background: linear-gradient(#212121, #212121) padding-box,
+      linear-gradient(115.2deg, transparent 35%, #e81cff, #40c9ff) border-box;
+  }
+  33% {
+    background: linear-gradient(#212121, #212121) padding-box,
+      linear-gradient(118.8deg, transparent 35%, #e81cff, #40c9ff) border-box;
+  }
+  34% {
+    background: linear-gradient(#212121, #212121) padding-box,
+      linear-gradient(122.4deg, transparent 35%, #e81cff, #40c9ff) border-box;
+  }
+  35% {
+    background: linear-gradient(#212121, #212121) padding-box,
+      linear-gradient(126deg, transparent 35%, #e81cff, #40c9ff) border-box;
+  }
+  36% {
+    background: linear-gradient(#212121, #212121) padding-box,
+      linear-gradient(129.6deg, transparent 35%, #e81cff, #40c9ff) border-box;
+  }
+  37% {
+    background: linear-gradient(#212121, #212121) padding-box,
+      linear-gradient(133.2deg, transparent 35%, #e81cff, #40c9ff) border-box;
+  }
+  38% {
+    background: linear-gradient(#212121, #212121) padding-box,
+      linear-gradient(136.8deg, transparent 35%, #e81cff, #40c9ff) border-box;
+  }
+  39% {
+    background: linear-gradient(#212121, #212121) padding-box,
+      linear-gradient(140.4deg, transparent 35%, #e81cff, #40c9ff) border-box;
+  }
+  40% {
+    background: linear-gradient(#212121, #212121) padding-box,
+      linear-gradient(144deg, transparent 35%, #e81cff, #40c9ff) border-box;
+  }
+  41% {
+    background: linear-gradient(#212121, #212121) padding-box,
+      linear-gradient(147.6deg, transparent 35%, #e81cff, #40c9ff) border-box;
+  }
+  42% {
+    background: linear-gradient(#212121, #212121) padding-box,
+      linear-gradient(151.2deg, transparent 35%, #e81cff, #40c9ff) border-box;
+  }
+  43% {
+    background: linear-gradient(#212121, #212121) padding-box,
+      linear-gradient(154.8deg, transparent 35%, #e81cff, #40c9ff) border-box;
+  }
+  44% {
+    background: linear-gradient(#212121, #212121) padding-box,
+      linear-gradient(158.4deg, transparent 35%, #e81cff, #40c9ff) border-box;
+  }
+  45% {
+    background: linear-gradient(#212121, #212121) padding-box,
+      linear-gradient(162deg, transparent 35%, #e81cff, #40c9ff) border-box;
+  }
+  46% {
+    background: linear-gradient(#212121, #212121) padding-box,
+      linear-gradient(165.6deg, transparent 35%, #e81cff, #40c9ff) border-box;
+  }
+  47% {
+    background: linear-gradient(#212121, #212121) padding-box,
+      linear-gradient(169.2deg, transparent 35%, #e81cff, #40c9ff) border-box;
+  }
+  48% {
+    background: linear-gradient(#212121, #212121) padding-box,
+      linear-gradient(172.8deg, transparent 35%, #e81cff, #40c9ff) border-box;
+  }
+  49% {
+    background: linear-gradient(#212121, #212121) padding-box,
+      linear-gradient(176.4deg, transparent 35%, #e81cff, #40c9ff) border-box;
+  }
+  /*  */
+
+  50% {
+    background: linear-gradient(#212121, #212121) padding-box,
+      linear-gradient(180deg, transparent 35%, #e81cff, #40c9ff) border-box;
+  }
+  51% {
+    background: linear-gradient(#212121, #212121) padding-box,
+      linear-gradient(183.6deg, transparent 35%, #e81cff, #40c9ff) border-box;
+  }
+  52% {
+    background: linear-gradient(#212121, #212121) padding-box,
+      linear-gradient(187.2deg, transparent 35%, #e81cff, #40c9ff) border-box;
+  }
+  53% {
+    background: linear-gradient(#212121, #212121) padding-box,
+      linear-gradient(190.8deg, transparent 35%, #e81cff, #40c9ff) border-box;
+  }
+  54% {
+    background: linear-gradient(#212121, #212121) padding-box,
+      linear-gradient(194.4deg, transparent 35%, #e81cff, #40c9ff) border-box;
+  }
+  55% {
+    background: linear-gradient(#212121, #212121) padding-box,
+      linear-gradient(198deg, transparent 35%, #e81cff, #40c9ff) border-box;
+  }
+  56% {
+    background: linear-gradient(#212121, #212121) padding-box,
+      linear-gradient(201.6deg, transparent 35%, #e81cff, #40c9ff) border-box;
+  }
+  57% {
+    background: linear-gradient(#212121, #212121) padding-box,
+      linear-gradient(205.2deg, transparent 35%, #e81cff, #40c9ff) border-box;
+  }
+  58% {
+    background: linear-gradient(#212121, #212121) padding-box,
+      linear-gradient(208.8deg, transparent 35%, #e81cff, #40c9ff) border-box;
+  }
+  59% {
+    background: linear-gradient(#212121, #212121) padding-box,
+      linear-gradient(212.4deg, transparent 35%, #e81cff, #40c9ff) border-box;
+  }
+  60% {
+    background: linear-gradient(#212121, #212121) padding-box,
+      linear-gradient(216deg, transparent 35%, #e81cff, #40c9ff) border-box;
+  }
+  61% {
+    background: linear-gradient(#212121, #212121) padding-box,
+      linear-gradient(219.6deg, transparent 35%, #e81cff, #40c9ff) border-box;
+  }
+  62% {
+    background: linear-gradient(#212121, #212121) padding-box,
+      linear-gradient(223.2deg, transparent 35%, #e81cff, #40c9ff) border-box;
+  }
+  63% {
+    background: linear-gradient(#212121, #212121) padding-box,
+      linear-gradient(226.8deg, transparent 35%, #e81cff, #40c9ff) border-box;
+  }
+  64% {
+    background: linear-gradient(#212121, #212121) padding-box,
+      linear-gradient(230.4deg, transparent 35%, #e81cff, #40c9ff) border-box;
+  }
+  65% {
+    background: linear-gradient(#212121, #212121) padding-box,
+      linear-gradient(234deg, transparent 35%, #e81cff, #40c9ff) border-box;
+  }
+  66% {
+    background: linear-gradient(#212121, #212121) padding-box,
+      linear-gradient(237.6deg, transparent 35%, #e81cff, #40c9ff) border-box;
+  }
+  67% {
+    background: linear-gradient(#212121, #212121) padding-box,
+      linear-gradient(241.2deg, transparent 35%, #e81cff, #40c9ff) border-box;
+  }
+  68% {
+    background: linear-gradient(#212121, #212121) padding-box,
+      linear-gradient(244.8deg, transparent 35%, #e81cff, #40c9ff) border-box;
+  }
+  69% {
+    background: linear-gradient(#212121, #212121) padding-box,
+      linear-gradient(248.4deg, transparent 35%, #e81cff, #40c9ff) border-box;
+  }
+  70% {
+    background: linear-gradient(#212121, #212121) padding-box,
+      linear-gradient(252deg, transparent 35%, #e81cff, #40c9ff) border-box;
+  }
+
+  71% {
+    background: linear-gradient(#212121, #212121) padding-box,
+      linear-gradient(255.6deg, transparent 35%, #e81cff, #40c9ff) border-box;
+  }
+  72% {
+    background: linear-gradient(#212121, #212121) padding-box,
+      linear-gradient(259.2deg, transparent 35%, #e81cff, #40c9ff) border-box;
+  }
+  73% {
+    background: linear-gradient(#212121, #212121) padding-box,
+      linear-gradient(262.8deg, transparent 35%, #e81cff, #40c9ff) border-box;
+  }
+  74% {
+    background: linear-gradient(#212121, #212121) padding-box,
+      linear-gradient(266.4deg, transparent 35%, #e81cff, #40c9ff) border-box;
+  }
+  75% {
+    background: linear-gradient(#212121, #212121) padding-box,
+      linear-gradient(270deg, transparent 35%, #e81cff, #40c9ff) border-box;
+  }
+  76% {
+    background: linear-gradient(#212121, #212121) padding-box,
+      linear-gradient(273.6deg, transparent 35%, #e81cff, #40c9ff) border-box;
+  }
+  77% {
+    background: linear-gradient(#212121, #212121) padding-box,
+      linear-gradient(277.2deg, transparent 35%, #e81cff, #40c9ff) border-box;
+  }
+  78% {
+    background: linear-gradient(#212121, #212121) padding-box,
+      linear-gradient(280.8deg, transparent 35%, #e81cff, #40c9ff) border-box;
+  }
+  79% {
+    background: linear-gradient(#212121, #212121) padding-box,
+      linear-gradient(284.4deg, transparent 35%, #e81cff, #40c9ff) border-box;
+  }
+  80% {
+    background: linear-gradient(#212121, #212121) padding-box,
+      linear-gradient(288deg, transparent 35%, #e81cff, #40c9ff) border-box;
+  }
+  81% {
+    background: linear-gradient(#212121, #212121) padding-box,
+      linear-gradient(291.6deg, transparent 35%, #e81cff, #40c9ff) border-box;
+  }
+  82% {
+    background: linear-gradient(#212121, #212121) padding-box,
+      linear-gradient(295.2deg, transparent 35%, #e81cff, #40c9ff) border-box;
+  }
+  83% {
+    background: linear-gradient(#212121, #212121) padding-box,
+      linear-gradient(298.8deg, transparent 35%, #e81cff, #40c9ff) border-box;
+  }
+  84% {
+    background: linear-gradient(#212121, #212121) padding-box,
+      linear-gradient(302.4deg, transparent 35%, #e81cff, #40c9ff) border-box;
+  }
+  85% {
+    background: linear-gradient(#212121, #212121) padding-box,
+      linear-gradient(306deg, transparent 35%, #e81cff, #40c9ff) border-box;
+  }
+  86% {
+    background: linear-gradient(#212121, #212121) padding-box,
+      linear-gradient(309.6deg, transparent 35%, #e81cff, #40c9ff) border-box;
+  }
+  87% {
+    background: linear-gradient(#212121, #212121) padding-box,
+      linear-gradient(313.2deg, transparent 35%, #e81cff, #40c9ff) border-box;
+  }
+  88% {
+    background: linear-gradient(#212121, #212121) padding-box,
+      linear-gradient(316.8deg, transparent 35%, #e81cff, #40c9ff) border-box;
+  }
+  89% {
+    background: linear-gradient(#212121, #212121) padding-box,
+      linear-gradient(320.4deg, transparent 35%, #e81cff, #40c9ff) border-box;
+  }
+  90% {
+    background: linear-gradient(#212121, #212121) padding-box,
+      linear-gradient(324deg, transparent 35%, #e81cff, #40c9ff) border-box;
+  }
+  91% {
+    background: linear-gradient(#212121, #212121) padding-box,
+      linear-gradient(327.6deg, transparent 35%, #e81cff, #40c9ff) border-box;
+  }
+  92% {
+    background: linear-gradient(#212121, #212121) padding-box,
+      linear-gradient(331.2deg, transparent 35%, #e81cff, #40c9ff) border-box;
+  }
+  93% {
+    background: linear-gradient(#212121, #212121) padding-box,
+      linear-gradient(334.8deg, transparent 35%, #e81cff, #40c9ff) border-box;
+  }
+  94% {
+    background: linear-gradient(#212121, #212121) padding-box,
+      linear-gradient(338.4deg, transparent 35%, #e81cff, #40c9ff) border-box;
+  }
+  95% {
+    background: linear-gradient(#212121, #212121) padding-box,
+      linear-gradient(342deg, transparent 35%, #e81cff, #40c9ff) border-box;
+  }
+  96% {
+    background: linear-gradient(#212121, #212121) padding-box,
+      linear-gradient(345.6deg, transparent 35%, #e81cff, #40c9ff) border-box;
+  }
+  97% {
+    background: linear-gradient(#212121, #212121) padding-box,
+      linear-gradient(349.2deg, transparent 35%, #e81cff, #40c9ff) border-box;
+  }
+  98% {
+    background: linear-gradient(#212121, #212121) padding-box,
+      linear-gradient(352.8deg, transparent 35%, #e81cff, #40c9ff) border-box;
+  }
+  99% {
+    background: linear-gradient(#212121, #212121) padding-box,
+      linear-gradient(356.4deg, transparent 35%, #e81cff, #40c9ff) border-box;
+  }
+  100% {
+    background: linear-gradient(#212121, #212121) padding-box,
+      linear-gradient(0deg, transparent 35%, #e81cff, #40c9ff) border-box;
+  }
+}

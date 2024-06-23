@@ -1,0 +1,20 @@
+/* .carouselContainer div[data-active="true"] */
+.animate-appear-1s {
+  animation: appear 1s ease-in-out;
+}
+
+/* .carouselContainer div[data-active="true"]  */
+.animate-appear-2s {
+  animation: appear 1.5s ease-in-out;
+}
+
+@keyframes appear {
+  0% {
+    transform: translateX(200px) scale(0.5);
+    opacity: 0;
+  }
+  1000% {
+    transform: translateX(0px) scale(1);
+    opacity: 1;
+  }
+}

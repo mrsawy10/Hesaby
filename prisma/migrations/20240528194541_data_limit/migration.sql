@@ -1,0 +1,2 @@
+-- AlterTable
+ALTER TABLE `SiteData` MODIFY `value` VARCHAR(60000) NOT NULL;

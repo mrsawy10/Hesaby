@@ -1,0 +1,205 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model Admin {
+  id           String  @id @default(cuid())
+  name         String?
+  email        String
+  phoneNumber  String?
+  profilePhoto String?
+  password     String
+  isSuper      Boolean @default(false)
+}
+
+model BankData {
+  id                String @id @default(cuid())
+  ibanNumber        String
+  bankName          String
+  accountHolderName String
+  user              User   @relation(fields: [user_id], references: [id])
+  user_id           String
+}
+
+model Game {
+  id          String    @id @default(cuid())
+  title       String
+  description String
+  gameImg     String?
+  isFeatured  Boolean   @default(false)
+  accounts    Account[]
+}
+
+model Platform {
+  id          String    @id @default(cuid())
+  title       String?
+  description String?
+  platformImg String?
+  accounts    Account[]
+}
+
+model Account {
+  id             String         @id @default(cuid())
+  isFeatured     Boolean        @default(false)
+  status         String
+  title          String
+  description    String
+  username       String
+  email          String
+  password       String
+  rejectedReason String?
+  game_email     String?
+  game_password  String?
+  price          Float
+  game           Game           @relation(fields: [game_id], references: [id], onDelete: Cascade)
+  game_id        String
+  platform_id    String
+  seller         User           @relation(fields: [seller_id], references: [id], onDelete: Cascade)
+  accountImg     String
+  seller_id      String
+  accountImages  AccountImage[]
+  orders         Order[]
+  platform       Platform       @relation(fields: [platform_id], references: [id], onDelete: Cascade)
+  wishLists      WishList[]
+  cart           Cart[]
+}
+
+model AccountImage {
+  id         String  @id @default(cuid())
+  image      String
+  account    Account @relation(fields: [account_id], references: [id], onDelete: Cascade)
+  account_id String
+}
+
+model User {
+  id                  String     @id @default(cuid())
+  firstName           String
+  lastName            String
+  email               String     @unique
+  bio                 String?
+  phoneNumber         String     @unique
+  password            String
+  profileImg          String?
+  coverImg            String?
+  bank_name           String?
+  card_number         String?
+  card_holder_name    String?
+  iban                String?    @unique
+  balance             Float      @default(0)
+  earnings            Float      @default(0)
+  numberOfDeals       Float      @default(0)
+  isWithdrawRequested Boolean    @default(false)
+  isBlocked           Boolean    @default(false)
+  bankData            BankData[]
+  accounts            Account[]
+  withdraws           Withdraw[]
+  order               Order[]
+  isEmailVerified     Boolean    @default(false)
+  isPhoneVerified     Boolean    @default(false)
+  createdAt           DateTime   @default(now())
+  updatedAt           DateTime   @default(now()) @updatedAt
+  cart                Cart[]
+  wishList            WishList[]
+}
+
+model Order {
+  id         String     @id @default(cuid())
+  account    Account    @relation(fields: [account_id], references: [id], onDelete: Cascade)
+  account_id String
+  seller_id  String
+  price      Float
+  status     String
+  user       User       @relation(fields: [user_id], references: [id], onDelete: Cascade)
+  user_id    String
+  Withdraw   Withdraw[]
+
+  @@map("Order")
+}
+
+model Withdraw {
+  id       String   @id @default(cuid())
+  status   String
+  amount   Float
+  paidAt   DateTime
+  order    Order    @relation(fields: [order_id], references: [id], onDelete: Cascade)
+  order_id String
+  user     User     @relation(fields: [user_id], references: [id], onDelete: Cascade)
+  user_id  String
+}
+
+// model Otp {
+//   id          Int    @id @default(autoincrement())
+//   value       String
+//   phoneNumber String
+// }
+
+model Partnership {
+  id    String @id @default(cuid())
+  title String
+  image String
+}
+
+model Post {
+  id      String @id @default(cuid())
+  type    String // faq , slider
+  content Json
+}
+
+model SiteData {
+  id         String @id @default(cuid())
+  identifier String @unique
+  value      String @db.VarChar(60000)
+}
+
+model Cart {
+  id         String  @id @default(cuid())
+  account    Account @relation(fields: [account_id], references: [id], onDelete: Cascade)
+  account_id String
+  user_id    String
+  user       User    @relation(fields: [user_id], references: [id], onDelete: Cascade)
+  accountId  String?
+  userId     String?
+
+  @@unique([account_id, user_id], name: "Unique_Account_User")
+}
+
+model WishList {
+  id         String  @id @default(cuid())
+  account    Account @relation(fields: [account_id], references: [id], onDelete: Cascade)
+  account_id String
+  user_id    String
+  user       User    @relation(fields: [user_id], references: [id], onDelete: Cascade)
+
+  @@unique([account_id, user_id], name: "Unique_Account_User")
+}
+
+model Transaction {
+  id     String @id @default(cuid())
+  amount String
+  type   String
+}
+
+model Faq {
+  id       String @id @default(cuid())
+  question String
+  answer   String
+}
+
+model Slide {
+  id         String @id @default(cuid())
+  image      String
+  titleImage String
+  btnTxt     String
+  btnUrl     String
+}
