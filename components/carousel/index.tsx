@@ -41,8 +41,9 @@ export default function CarouselSize({
   carouselItemClassName?: string;
 }) {
   let finalResult: any[] = [];
+  const finalAccResult = useTax(data);
   if (type == `account`) {
-    finalResult = useTax(data);
+    finalResult = finalAccResult;
   } else if (type == `game` && data) {
     finalResult = data;
   }

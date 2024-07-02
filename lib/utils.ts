@@ -116,6 +116,10 @@ export const applyTax = async (data: Account[] | undefined) => {
   });
 };
 
-export function getQueryFromKeys<T>(obj: T, keyword: string) {
+// export function getQueryFromKeys<T>(obj: T, keyword: string) {
+//   return Object.keys(obj).map((ele) => ({ [ele]: { contains: keyword } }));
+// }
+
+export function getQueryFromKeys<T extends Record<string, any>>(obj: T, keyword: string) {
   return Object.keys(obj).map((ele) => ({ [ele]: { contains: keyword } }));
 }

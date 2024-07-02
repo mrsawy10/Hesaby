@@ -8,7 +8,7 @@ async function Page() {
 
   const structure = [
     { element: `label`, text: `Logo` },
-    
+    {
       element: `input`,
       title: `Logo Image`,
       name: `general_logo_img`,
@@ -21,7 +21,7 @@ async function Page() {
 
     { element: `label`, text: `Admin Main Email (Responsible for receiving messages)` },
     {
-      element: `input`
+      element: `input`,
       title: `admin email`,
       name: `general_admin_email`,
       type: `text`,
@@ -33,7 +33,7 @@ async function Page() {
       title: `Main phone`,
       name: `general_main_phone`,
       type: `text`,
-      defaultValue: siteDta.find((d) => d.identifier == `general_main_phone`)?.value,
+      defaultValue: siteData.find((d) => d.identifier == `general_main_phone`)?.value,
     },
     { element: `hr` },
 
@@ -43,7 +43,7 @@ async function Page() {
       title: `Tax`,
       name: `general_tax`,
       type: `text`,
-      defaultValue: siteDaa.find((d) => d.identifier == `general_tax`)?.value,
+      defaultValue: siteData.find((d) => d.identifier == `general_tax`)?.value,
     },
 
     { element: `label`, text: `Currency` },
@@ -52,7 +52,7 @@ async function Page() {
       title: `Currency`,
       name: `general_currency`,
       type: `text`,
-      defaultValue: siteDat.find((d) => d.identifier == `general_currency`)?.value,
+      defaultValue: siteData.find((d) => d.identifier == `general_currency`)?.value,
     },
     { element: `hr` },
 
@@ -70,7 +70,7 @@ async function Page() {
       title: `Buy Alert`,
       name: `general_buy_alert_content`,
       type: `editor`,
-      defaultValue: siteDatafind((d) => d.identifier == `general_buy_alert_content`)?.value,
+      defaultValue: siteData.find((d) => d.identifier == `general_buy_alert_content`)?.value,
     },
 
     { element: `hr` },

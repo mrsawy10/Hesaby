@@ -27,7 +27,7 @@ export default function Container({
   btnTxt?: string;
   type: string;
   btnUrlPrefix: string;
-  smallAspects: string;
+  smallAspects?: string;
   btnTextPrice: boolean;
 }) {
   data = useTax(data);
