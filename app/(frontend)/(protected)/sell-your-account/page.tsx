@@ -3,6 +3,9 @@
 import AccountForm from "./components/account-form";
 import prisma from "@/prisma/db";
 import Panel from "@/components/text-panel";
+import { Divider } from "@nextui-org/divider";
+import Breadcrumb from "@/components/Breadcrumb";
+// export Breadcrumb
 
 export default async function Page() {
   let platforms = await prisma.platform.findMany();
@@ -18,7 +21,11 @@ export default async function Page() {
   // console.log({ games, platforms });
 
   return (
-    <div className=" pt-24 ">
+    <div className=" pt-24  text-center">
+      {/* <h1 className="text-3xl font-bold text-zinc-800 dark:text-zinc-100 m-auto mb-4 pb-4 ">بيع حسابك</h1> */}
+      <div className="container">
+        <Divider />
+      </div>
       <div className=" font-bold  text-black m-auto w-11/12 md:w-9/12 ">
         <AccountForm
           sellAlert={`${sellAlert}`}

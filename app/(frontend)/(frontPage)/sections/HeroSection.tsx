@@ -16,7 +16,7 @@ export function Component({ slides }: { slides: Slide[] }) {
       <Carousel
         pauseOnHover
         onSlideChange={(index) => {
-          console.log("onSlideChange()", index);
+          // console.log("onSlideChange()", index);
           document.querySelector(`.identifier-anim-1`)?.classList.remove(`animate-appear-1s`);
           document.querySelector(`.identifier-anim-1`)?.classList.add(`animate-appear-1s`);
         }}

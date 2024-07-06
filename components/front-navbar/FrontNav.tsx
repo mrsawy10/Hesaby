@@ -42,8 +42,7 @@ export default function Example() {
     { name: t("all Accounts"), href: "/accounts", current: pathname.includes(`accounts`) },
   ];
   let currentTheme = useThemeStore((s) => s.currentTheme);
-  let { cart } = useCartStore();
-
+  // let { cart } = useCartStore();
   // let router = useRouter();
   // useEffect(() => {
   //   console.log({ cart });
@@ -66,21 +65,15 @@ export default function Example() {
     useWishlistStore.persist.rehydrate();
     let token: any;
     if (getCookie(`hesaby-user-token`)) {
-      // console.log(`token ==> cookie`, getCookie(`hesaby-user-token`));
       token = getCookie(`hesaby-user-token`)?.toString();
     } else if (localStorage.getItem(`hesaby-user-token`)) {
-      // console.log(`token ==> localStorage`, localStorage.getItem(`hesaby-user-token`));
       token = localStorage.getItem(`hesaby-user-token`);
     } else if (authToken) {
       token = authToken;
     }
+    testAuth(token)
 
-    console.log(`token ==>`, token);
-
-    //  __________________
-    // setTimeout(async () => {
-    //   await testAuth(token);
-    // }, 2000);
+    // console.log({ token });
   }, []);
 
   // authDispatch
@@ -141,13 +134,10 @@ export default function Example() {
                   </div>
                 </div>
               </div>
-              {/* <Loading */}
               <IsLoadingComponent loading={generalIsLoading} />
               <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
                 <DarkModeSwitch />
-
                 <CartSheet />
-
                 <SignedOut className="flex">
                   <Link href="/auth">
                     <Button className="py-1 px-4 text-md">
@@ -155,7 +145,6 @@ export default function Example() {
                     </Button>
                   </Link>
                 </SignedOut>
-
                 <SignedIn className="flex">
                   <div className="flex justify-center items-center">
                     <Link href="/sell-your-account">
@@ -237,10 +226,8 @@ export default function Example() {
                                 )}
                                 onClick={(e) => {
                                   e.preventDefault();
-                                  // authDispatch({ type: `LOGOUT` });
                                   setLogout();
                                   setTimeout(() => {
-                                    // window.location.reload();
                                     window.location.href = "/";
                                   }, 200);
                                 }}

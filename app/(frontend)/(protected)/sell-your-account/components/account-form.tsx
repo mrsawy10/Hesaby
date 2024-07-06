@@ -27,6 +27,12 @@ import Link from "next/link";
 import { t } from "i18next";
 import LoginFirst from "@/components/LoginFirst";
 import Panel from "@/components/text-panel";
+import Breadcrumb from "@/components/Breadcrumb";
+import HomeIcon from "@mui/icons-material/Home";
+import GrainIcon from "@mui/icons-material/Grain";
+import GamepadIcon from "@mui/icons-material/Gamepad";
+import VideogameAssetIcon from "@mui/icons-material/VideogameAsset";
+import SportsEsportsIcon from "@mui/icons-material/SportsEsports";
 
 //
 registerPlugin(FilePondPluginImageExifOrientation, FilePondPluginImagePreview);
@@ -160,10 +166,19 @@ export default function AccountForm({
           }
         }
       }}
-      className="flex flex-col gap-4 rounded-sm pt-24 px-6 lg:mb-9 lg:mt-3 dark:bg-zinc-900"
+      className="flex flex-col gap-4 rounded-sm pt-12 px-6 lg:mb-9 lg:mt-3 dark:bg-zinc-900"
     >
       {/* <Panel>{t(`sell_your_account`)}</Panel> */}
 
+      <Breadcrumb breadCrumbClassName="tajawal-regular" className="mb-7 tajawal-regular" elements={[{ text: t(`Home`), url: `/`, icon: <HomeIcon /> }, {
+
+        icon: <VideogameAssetIcon />,
+        text: t(`sell_your_account`)
+        // GrainIcon
+        // GamepadIcon
+        // VideogameAssetIcon
+        // SportsEsportsIcon
+      }]} />
       <div className="flex flex-col sm:flex-row gap-2">
         <Input
           containerClassName="w-full flex-grow"

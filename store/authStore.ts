@@ -54,14 +54,9 @@ export const testAuth = async (token: string | undefined | null) => {
     if (!response.ok) throw new Error();
 
     setLogin(user);
-
-    // useCartStore.setState({ cart: user.cart.map((ele: any) => ele.account) });
-    // useWishlistStore.setState({ wishlist: user.wishList.map((ele: any) => ele.account) });
-
     setCartState(user);
     setWishListState(user);
 
-    // return user;
   } catch (error) {
     console.log(`test auth failed ==>`, error);
     if (error) {

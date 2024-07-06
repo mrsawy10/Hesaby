@@ -14,10 +14,13 @@ function SignedOut({
   children: React.ReactNode;
   className?: string;
 }) {
-  let { isLoading, isError } = useStore((state) => ({
+  let { isLoading, isError, isSuccess } = useStore((state) => ({
     isLoading: state.isLoading,
     isError: state.isError,
+    isSuccess: state.isSuccess,
   }));
+
+  // console.log({ isLoading, isError, isSuccess })
 
   return (
     <div className={cn(containerClassName)}>
