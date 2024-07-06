@@ -51,6 +51,7 @@ export function Component({ slides }: { slides: Slide[] }) {
                     src={titleImage ? titleImage : ``}
                     alt="game banner"
                     priority
+                    unoptimized
                   />
                   {/* <div className={cn("w-full mx-auto my-4 ")}> */}
                   <SliderButton price={btnTxt} url={btnUrl} />
