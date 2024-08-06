@@ -17,7 +17,7 @@ import "sweetalert2/src/sweetalert2.scss";
 
 
 export const dynamic = "force-dynamic";
-export const revalidate = 20;
+export const revalidate = 21;
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
